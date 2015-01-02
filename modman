@@ -1,0 +1,6 @@
+app/code/local/Aydus/Categoryspecialprices                                    app/code/local/Aydus/Categoryspecialprices/
+app/design/adminhtml/default/default/layout/aydus/categoryspecialprices.xml   app/design/adminhtml/default/default/layout/aydus/
+app/etc/modules/Aydus_Categoryspecialprices.xml                               app/etc/modules/
+skin/adminhtml/default/default/aydus/categoryspecialprices.js                 skin/adminhtml/default/default/aydus/
+
+@shell rm -rf $PROJECT/var/cache/*

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * Category special prices
+ * 
+ * @category    Aydus
+ * @package     Aydus_Categoryspecialprices
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_Categoryspecialprices>
+            <version>1.0.0</version>
+        </Aydus_Categoryspecialprices>
+    </modules>
+	<adminhtml>
+	    <events>
+	        <adminhtml_catalog_category_tabs>
+	            <observers>
+	                <categoryspecialprices_tab>
+	                    <class>categoryspecialprices/observer</class>
+	                    <method>addCategorySpecialPricesTab</method>
+	                </categoryspecialprices_tab>
+	            </observers>
+	        </adminhtml_catalog_category_tabs>
+	        <catalog_category_prepare_save>
+	            <observers>
+	                <categoryspecialprices_save>
+	                    <class>categoryspecialprices/observer</class>
+	                    <method>applySpecialPrices</method>
+	                </categoryspecialprices_save>
+	            </observers>	        
+	        </catalog_category_prepare_save>
+	        <catalog_product_save_before>
+	            <observers>
+	                <product_specialprice_apply>
+	                    <class>categoryspecialprices/observer</class>
+	                    <method>productSpecialPriceApply</method>
+	                </product_specialprice_apply>
+	            </observers>	        
+	        </catalog_product_save_before>
+			<catalog_product_edit_action>
+		        <observers>
+		            <product_specialprice_date>
+		                <class>categoryspecialprices/observer</class>
+		                <method>displaySpecialPriceDate</method>
+		           </product_specialprice_date>
+		        </observers>
+		    </catalog_product_edit_action>
+	    </events>
+        <layout>
+            <updates>
+                <categoryspecialprices>
+                    <file>Aydus/categoryspecialprices.xml</file>
+                </categoryspecialprices>
+            </updates>
+        </layout>
+	</adminhtml>
+	<admin>
+	    <routers>
+	        <adminhtml>
+	            <args>
+	                <modules>
+	                    <Aydus_Categoryspecialprices before="Mage_Adminhtml">Aydus_Categoryspecialprices_Adminhtml</Aydus_Categoryspecialprices>
+	                </modules>
+	            </args>
+	        </adminhtml>
+	    </routers>
+	</admin>    
+    <global>
+	    <helpers>
+            <categoryspecialprices>
+                <class>Aydus_Categoryspecialprices_Helper</class>
+            </categoryspecialprices>            
+	    </helpers>
+        <blocks>
+            <categoryspecialprices>
+                <class>Aydus_Categoryspecialprices_Block</class>
+            </categoryspecialprices>            
+        </blocks>
+        <models>
+        	<categoryspecialprices>
+                <class>Aydus_Categoryspecialprices_Model</class>
+            </categoryspecialprices>
+        </models>   
+		<resources>
+			<Aydus_categoryspecialprices_setup>
+				<setup>
+					<module>Aydus_Categoryspecialprices</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</Aydus_categoryspecialprices_setup>
+		</resources>        
+    </global>
+</config>
