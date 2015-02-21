@@ -52,7 +52,7 @@
         <layout>
             <updates>
                 <categoryspecialprices>
-                    <file>Aydus/categoryspecialprices.xml</file>
+                    <file>aydus/categoryspecialprices.xml</file>
                 </categoryspecialprices>
             </updates>
         </layout>
@@ -85,14 +85,14 @@
             </categoryspecialprices>
         </models>   
 		<resources>
-			<Aydus_categoryspecialprices_setup>
+			<aydus_categoryspecialprices_setup>
 				<setup>
 					<module>Aydus_Categoryspecialprices</module>
 				</setup>
 				<connection>
 					<use>core_setup</use>
 				</connection>
-			</Aydus_categoryspecialprices_setup>
+			</aydus_categoryspecialprices_setup>
 		</resources>        
     </global>
 </config>
