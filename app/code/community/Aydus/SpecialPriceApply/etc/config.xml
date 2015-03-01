@@ -4,38 +4,38 @@
  * Category special prices
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 -->
 <config>
     <modules>
-        <Aydus_Categoryspecialprices>
+        <Aydus_SpecialPriceApply>
             <version>1.0.0</version>
-        </Aydus_Categoryspecialprices>
+        </Aydus_SpecialPriceApply>
     </modules>
 	<adminhtml>
 	    <events>
 	        <adminhtml_catalog_category_tabs>
 	            <observers>
-	                <categoryspecialprices_tab>
-	                    <class>categoryspecialprices/observer</class>
+	                <specialpriceapply_tab>
+	                    <class>specialpriceapply/observer</class>
 	                    <method>addCategorySpecialPricesTab</method>
-	                </categoryspecialprices_tab>
+	                </specialpriceapply_tab>
 	            </observers>
 	        </adminhtml_catalog_category_tabs>
 	        <catalog_category_prepare_save>
 	            <observers>
-	                <categoryspecialprices_save>
-	                    <class>categoryspecialprices/observer</class>
+	                <specialpriceapply_save>
+	                    <class>specialpriceapply/observer</class>
 	                    <method>applySpecialPrices</method>
-	                </categoryspecialprices_save>
+	                </specialpriceapply_save>
 	            </observers>	        
 	        </catalog_category_prepare_save>
 	        <catalog_product_save_before>
 	            <observers>
 	                <product_specialprice_apply>
-	                    <class>categoryspecialprices/observer</class>
+	                    <class>specialpriceapply/observer</class>
 	                    <method>productSpecialPriceApply</method>
 	                </product_specialprice_apply>
 	            </observers>	        
@@ -43,7 +43,7 @@
 			<catalog_product_edit_action>
 		        <observers>
 		            <product_specialprice_date>
-		                <class>categoryspecialprices/observer</class>
+		                <class>specialpriceapply/observer</class>
 		                <method>displaySpecialPriceDate</method>
 		           </product_specialprice_date>
 		        </observers>
@@ -51,9 +51,9 @@
 	    </events>
         <layout>
             <updates>
-                <categoryspecialprices>
-                    <file>aydus/categoryspecialprices.xml</file>
-                </categoryspecialprices>
+                <specialpriceapply>
+                    <file>aydus/specialpriceapply.xml</file>
+                </specialpriceapply>
             </updates>
         </layout>
 	</adminhtml>
@@ -62,7 +62,7 @@
 	        <adminhtml>
 	            <args>
 	                <modules>
-	                    <Aydus_Categoryspecialprices before="Mage_Adminhtml">Aydus_Categoryspecialprices_Adminhtml</Aydus_Categoryspecialprices>
+	                    <Aydus_SpecialPriceApply before="Mage_Adminhtml">Aydus_SpecialPriceApply_Adminhtml</Aydus_SpecialPriceApply>
 	                </modules>
 	            </args>
 	        </adminhtml>
@@ -70,29 +70,29 @@
 	</admin>    
     <global>
 	    <helpers>
-            <categoryspecialprices>
-                <class>Aydus_Categoryspecialprices_Helper</class>
-            </categoryspecialprices>            
+            <specialpriceapply>
+                <class>Aydus_SpecialPriceApply_Helper</class>
+            </specialpriceapply>            
 	    </helpers>
         <blocks>
-            <categoryspecialprices>
-                <class>Aydus_Categoryspecialprices_Block</class>
-            </categoryspecialprices>            
+            <specialpriceapply>
+                <class>Aydus_SpecialPriceApply_Block</class>
+            </specialpriceapply>            
         </blocks>
         <models>
-        	<categoryspecialprices>
-                <class>Aydus_Categoryspecialprices_Model</class>
-            </categoryspecialprices>
+        	<specialpriceapply>
+                <class>Aydus_SpecialPriceApply_Model</class>
+            </specialpriceapply>
         </models>   
 		<resources>
-			<aydus_categoryspecialprices_setup>
+			<aydus_specialpriceapply_setup>
 				<setup>
-					<module>Aydus_Categoryspecialprices</module>
+					<module>Aydus_SpecialPriceApply</module>
 				</setup>
 				<connection>
 					<use>core_setup</use>
 				</connection>
-			</aydus_categoryspecialprices_setup>
+			</aydus_specialpriceapply_setup>
 		</resources>        
     </global>
 </config>

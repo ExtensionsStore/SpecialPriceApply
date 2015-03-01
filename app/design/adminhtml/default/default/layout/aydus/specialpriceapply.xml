@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Category special prices tab
+ * 
+ * @category    Aydus
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<layout>
+    <adminhtml_catalog_category_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><script>aydus/specialpriceapply.js</script></action>
+		</reference>    
+    </adminhtml_catalog_category_index>
+
+    <adminhtml_catalog_category_edit>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><script>aydus/specialpriceapply.js</script></action>
+		</reference>    
+    </adminhtml_catalog_category_edit>
+</layout>

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Category special prices helper
+ * Special Price Apply helper
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
-class Aydus_Categoryspecialprices_Helper_Data extends Mage_Core_Helper_Abstract
+class Aydus_SpecialPriceApply_Helper_Data extends Mage_Core_Helper_Abstract
 {
 	/**
 	 * Special Price apply javascript for category tab Category Special Prices

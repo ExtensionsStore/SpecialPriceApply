@@ -4,13 +4,13 @@
  * Catalog category controller
  *
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
 require('Mage/Adminhtml/controllers/Catalog/CategoryController.php');
 
-class Aydus_Categoryspecialprices_Adminhtml_CategoryspecialpricesController extends Mage_Adminhtml_Catalog_CategoryController
+class Aydus_SpecialPriceApply_Adminhtml_SpecialPriceApplyController extends Mage_Adminhtml_Catalog_CategoryController
 {
     /**
      * Grid Action
@@ -24,8 +24,8 @@ class Aydus_Categoryspecialprices_Adminhtml_CategoryspecialpricesController exte
             return;
         }
         
-        $html = $this->getLayout()->createBlock('categoryspecialprices/adminhtml_catalog_category_tab_specialprices', 'category.specialprice.grid')->toHtml();
-        $html .= Mage::helper('categoryspecialprices')->getApplyJavascript();
+        $html = $this->getLayout()->createBlock('specialpriceapply/adminhtml_catalog_category_tab_specialprices', 'category.specialprice.grid')->toHtml();
+        $html .= Mage::helper('specialpriceapply')->getApplyJavascript();
         
         $this->getResponse()->setBody($html);
     }

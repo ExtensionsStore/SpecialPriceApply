@@ -4,8 +4,8 @@
  * special_price_apply attribute
  *
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
 $installer = $this;
@@ -30,7 +30,7 @@ $catalogSetup->addAttribute(Mage_Catalog_Model_Product::ENTITY, 'special_price_a
 ));
 
 //table to reserve special price dates
-$installer->run("CREATE TABLE IF NOT EXISTS {$this->getTable('aydus_categoryspecialprices')} (
+$installer->run("CREATE TABLE IF NOT EXISTS {$this->getTable('aydus_specialpriceapply')} (
 `product_id` INT(11) NOT NULL,
 `special_from_date` DATETIME,
 `special_to_date` DATETIME,

@@ -4,11 +4,11 @@
  * Category special prices
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
-class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstract
+class Aydus_SpecialPriceApply_Model_Observer extends Mage_Core_Model_Abstract
 {
 	protected $_read;
 	protected $_write;
@@ -20,7 +20,7 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 		$this->_write = $resource->getConnection('core_write');
 		$this->_read = $resource->getConnection('core_read');
 		$prefix = Mage::getConfig()->getTablePrefix();
-		$this->_table = $prefix.'Aydus_categoryspecialprices';
+		$this->_table = $prefix.'Aydus_specialpriceapply';
 	}
 	
 	/**
@@ -28,18 +28,18 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 	 * Add 'Category Special Prices' tab while the tabs are being generated
 	 * 
      * @param Varien_Event_Observer $observer
-	 * @return Aydus_Categoryspecialprices_Model_Observer
+	 * @return Aydus_SpecialPriceApply_Model_Observer
 	 */
 	public function addCategorySpecialPricesTab($observer)
 	{
 		$tabs = $observer->getTabs();
 		
-		$block = Mage::app()->getLayout()->createBlock('categoryspecialprices/adminhtml_catalog_category_tab_specialprices')->setName('category.specialprice.grid');
+		$block = Mage::app()->getLayout()->createBlock('specialpriceapply/adminhtml_catalog_category_tab_specialprices')->setName('category.specialprice.grid');
         $content = $block->toHtml();
-        $content .= Mage::helper('categoryspecialprices')->getApplyJavascript();
+        $content .= Mage::helper('specialpriceapply')->getApplyJavascript();
         
 		$tabs->addTab('specialprice', array(
-				'label'     => Mage::helper('categoryspecialprices')->__('Category Special Prices'),
+				'label'     => Mage::helper('specialpriceapply')->__('Category Special Prices'),
 				'content'   => $content,
 				'active'    => false
 		));
@@ -51,7 +51,7 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 	 * Apply special price
 	 * 
      * @param Varien_Event_Observer $observer
-	 * @return Aydus_Categoryspecialprices_Model_Observer
+	 * @return Aydus_SpecialPriceApply_Model_Observer
 	 */
 	public function applySpecialPrices($observer)
 	{
@@ -85,7 +85,7 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 						
 					} catch (Exception $e){
 						
-						Mage::log($e->getMessage(),null, 'categoryspecialprices.log');
+						Mage::log($e->getMessage(),null, 'specialpriceapply.log');
 					}
 					
 				}
@@ -102,7 +102,7 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 	 * So special price does not display
 	 * 
      * @param Varien_Event_Observer $observer
-	 * @return Aydus_Categoryspecialprices_Model_Observer
+	 * @return Aydus_SpecialPriceApply_Model_Observer
 	 */
 	public function productSpecialPriceApply($observer)
 	{
@@ -145,7 +145,7 @@ class Aydus_Categoryspecialprices_Model_Observer extends Mage_Core_Model_Abstrac
 	 * 
 	 * @see catalog_product_edit_action
      * @param Varien_Event_Observer $observer
-	 * @return Aydus_Categoryspecialprices_Model_Observer
+	 * @return Aydus_SpecialPriceApply_Model_Observer
 	 */
 	public function displaySpecialPriceDate($observer)
 	{

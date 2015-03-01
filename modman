@@ -1,5 +1,5 @@
-app/code/community/Aydus/Categoryspecialprices                                app/code/community/Aydus/Categoryspecialprices/
-app/design/adminhtml/default/default/layout/aydus/categoryspecialprices.xml   app/design/adminhtml/default/default/layout/aydus/
-app/etc/modules/Aydus_Categoryspecialprices.xml                               app/etc/modules/
-skin/adminhtml/default/default/aydus/categoryspecialprices.js                 skin/adminhtml/default/default/aydus/
+app/code/community/Aydus/SpecialPriceApply/                               app/code/community/Aydus/SpecialPriceApply
+app/design/adminhtml/default/default/layout/aydus/specialpriceapply.xml   app/design/adminhtml/default/default/layout/aydus/specialpriceapply.xml
+app/etc/modules/Aydus_SpecialPriceApply.xml                               app/etc/modules/Aydus_SpecialPriceApply.xml
+skin/adminhtml/default/default/aydus/specialpriceapply.js                 skin/adminhtml/default/default/aydus/specialpriceapply.js
 

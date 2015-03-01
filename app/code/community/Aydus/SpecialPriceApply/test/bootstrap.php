@@ -4,8 +4,8 @@
  * Load Magento instance and run tests
  *
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
 //get the magento path, not the symlink path

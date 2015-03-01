@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!-- 
 /**
- * Category special prices module
+ * Special Price Apply module
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
+ * @package     Aydus_SpecialPriceApply
  * @author      Aydus <davidt@aydus.com>
  */
 -->
 <config>
     <modules>
-        <Aydus_Categoryspecialprices>
+        <Aydus_SpecialPriceApply>
             <active>true</active>
             <codePool>community</codePool>
-        </Aydus_Categoryspecialprices>
+        </Aydus_SpecialPriceApply>
     </modules>
 </config>

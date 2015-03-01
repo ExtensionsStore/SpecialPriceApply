@@ -2,7 +2,7 @@
  * Category special prices javascript
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
+ * @package     Aydus_SpecialPriceApply
  * @author      Aydus <davidt@aydus.com>
  */
 

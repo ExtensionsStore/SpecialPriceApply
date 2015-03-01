@@ -3,11 +3,11 @@
  * Category special prices tab
  * 
  * @category    Aydus
- * @package     Aydus_Categoryspecialprices
- * @author		Aydus <davidt@aydus.com>
+ * @package     Aydus_SpecialPriceApply
+ * @author      Aydus <davidt@aydus.com>
  */
 
-class Aydus_Categoryspecialprices_Block_Adminhtml_Catalog_Category_Tab_Specialprices extends Mage_Adminhtml_Block_Widget_Grid
+class Aydus_SpecialPriceApply_Block_Adminhtml_Catalog_Category_Tab_Specialprices extends Mage_Adminhtml_Block_Widget_Grid
 {
 
     public function __construct()
@@ -141,7 +141,7 @@ class Aydus_Categoryspecialprices_Block_Adminhtml_Catalog_Category_Tab_Specialpr
 
     public function getGridUrl()
     {
-        return $this->getUrl('*/categoryspecialprices/specialpricesgrid', array('_current'=>true));
+        return $this->getUrl('*/specialpriceapply/specialpricesgrid', array('_current'=>true));
     }
 
     protected function _getSelectedProducts()
